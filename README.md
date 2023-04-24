@@ -1,1 +1,4 @@
-# projekt_1_infa
+# instrukcja obsługi
+zwykłąy text
+Żeby uruchomić program nalezy wykonać poniższą komendę w cmd:
+```python skrypt.py```
