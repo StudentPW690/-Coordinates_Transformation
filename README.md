@@ -35,10 +35,12 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> 5. piąta kolumna stanowi wartość minutową lambdy,
 <br> 6. szósta kolumna - wartość minutową kąta lambdy,
 <br> 7. siódma kolumna - numer pasa odwzorowawczego w układzie PL2000 
-(dla wartości lambdy z przedziału: 13.5-16.5 stopnia - pas 5; 16.5-19.5 stopnia - pas 6; 19.5-22.5 stopnia - pas 7; 22.5-25.5 - pas 8)
+(dla wartości lambdy z przedziału: 13.5-16.5 stopnia - pas 5;
+<br> 16.5-19.5 stopnia - pas 6; 19.5-22.5 stopnia - pas 7; 22.5-25.5 - pas 8)
 <br> 8. ósma kolumna - wartość stopniowa dla danego pasa odwzorowawczego (odpowiednio 15, 18, 21 lub 24 stopnie)
 <br>Po uruchomieniu programu następuje proces zapisu do pliku tekstowego (.txt), 
-w którym otrzymujemy wyniki podzielone na dwie kolumny: X oraz Y w układzie PL2000.
+w którym otrzymujemy wyniki podzielone na dwie kolumny:
+<br> X oraz Y w układzie PL2000.
 <br> Program został przetestowany za pomocą wiersza poleceń, aby wprowadzić plik tekstowy do obliczenia wartości
 należy posługiwać się wyżej ukazaną instrukcją. 
 
