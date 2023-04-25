@@ -28,7 +28,7 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> Program został przetestowany za pomocą wiersza poleceń, aby wprowadzić plik tekstowy do obliczenia wartości
 należy posługiwać się nastepującą instrukcją. W pliku tekstowym wartości powinny być oddzielone spacją, w pierwszej 
 kolumnie muszą znaleźć się wartości stopniowe kąta phi, w drugiej lambdy, kolejno wysokość oraz nazwa elipsoidy
-*Przykład* 
+<br>*Przykład* 
 <br>3966086.489 1305184.14 4807557.867 GRS80
 <br>2594756.458 1258912.127 5988562.236 GRS80
 <br>4662213.222 2465664.45 4635321.796 GRS80
