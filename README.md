@@ -6,7 +6,7 @@ jeden z komputerów jest wyposażony w kartę graficzną NVIDIA GEFORCE GTX, pro
 pamięć RAM o wielkości 16 GB oraz 64-bitowy system operacyjny.
 <br> Drugi komputer wykorzystany do napisania projektu posiada system operacyjny Windows 10, pamięć RAM o wielkości 16 GB oraz 64-bitowy system operacyjny,
 procesor intel CORE i5 oraz kartę graficzną NVIDIA GEFORCE GTX.
-<br> Po uruchomieniu programu pythonowego: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
+<br> Po uruchomieniu programu python: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
 <br>Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
 analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze posługiwanie się funkcjami matematycznymi. 
 Zaś biblioteka argparse pozwala na łatwe parsowanie argumentów wywołania programu z wiersza poleceń, 
