@@ -18,8 +18,8 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000;
 <br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992; 
 <br> Dodatkowo są obsługiwane elispoidy GRS80, Krasowski oraz WGS84.
-<br> Elipsoidy charakteryzują się wartościami a oraz e<sup>2</sup>.
-<br>Gdzie a jest to wielka półoś elipsy, a e<sup>2</sup> to mimośród.
+<br> Elipsoidy charakteryzują się wartościami *a* oraz *e<sup>2</sup>*.
+<br>Gdzie *a* jest to wielka półoś elipsy, a *e<sup>2</sup>* to mimośród.
 <br> Przy elipsoidzie GRS80 te wartości wynoszą odpowiednio 6378137.000 oraz 0.00669438002290, przy elipsoidzie WGS84
 6378137.000 oraz  0.00669437999014, a przy elipsoidzie Krasowskiego 6378245.000 oraz 0.00669342162297.
 <br> Przy wprowadzeniu elipsoidy nie wymienionej wyżej program informuje komunikatem "Nieobsługiwana elipsoida!"
