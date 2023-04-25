@@ -1,8 +1,9 @@
 # Informacje dotyczące projektu 
 
 ***Program - wymagania do jego uruchomienia***
-<br> Przedstawiony program, należy uruchomić za pomocą Python 3.10, został on napisany na systemie operacyjnym Windows 10,
-komputer jest wyposażony w kartę graficzną NVIDIA GEFORCE GTX oraz procesor intel CORE i5. 
+<br> Przedstawiony program, należy uruchomić za pomocą Python 3.10, został on napisany na systemie operacyjnym Windows 10 Education,
+komputer jest wyposażony w kartę graficzną NVIDIA GEFORCE GTX, procesor AMD Ryzen 7 4800H with Radeon Graphics,
+pamięć RAM o wielkości 16 GB oraz 64-bitowy system operacujny.
 <br> Po uruchomieniu programu pythonowego: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
 <br>Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
 analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze posługiwanie się funkcjami matematycznymi. 
