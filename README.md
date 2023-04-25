@@ -10,8 +10,8 @@ Zaś biblioteka argparse pozwala na łatwe parsowanie argumentów wywołania pro
 umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać do programu podczas jego uruchamiania.  
 
 ##Funkcjonalność i posługiwanie się programem 
-Program służy do transforamcji współrzędnych punktów z jednego układu współrzędnych geodezyjnych na inny. 
-W podanym programie przedstawione zostały transformacje ze współrzędnych:
+<br>Program służy do transforamcji współrzędnych punktów z jednego układu współrzędnych geodezyjnych na inny. 
+<br>W podanym programie przedstawione zostały transformacje ze współrzędnych:
 <br> 1) geocentrycznych (XYZ) na elipsoidalne(BLH),
 <br> 2) elipsoidalnych (BLH) na geocentryczne (XYZ); 
 <br> 3) geocentrycznych (XYZ) na topocentryczne (NEU); 
