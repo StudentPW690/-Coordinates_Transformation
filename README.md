@@ -3,8 +3,8 @@
 ##Program - wymagania do jego uruchomienia 
 <br> Przedstawiony program, należy uruchomić za pomocą Python 3.10, został on napisany na systemie operacyjnym Windows 10,
 komputer jest wyposażony w kartę graficzną NVIDIA GEFORCE GTX oraz procesor intel CORE i5. 
-<br> Po uruchomieniu programu pythonowego: ```projinfa.py```, należy zapoznać się z jego wymaganiami,
-<br> tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
+<br> Po uruchomieniu programu pythonowego: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
+<br>Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
 analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze posługiwanie się funkcjami matematycznymi. 
 Zaś biblioteka argparse pozwala na łatwe parsowanie argumentów wywołania programu z wiersza poleceń, 
 umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać do programu podczas jego uruchamiania.  
