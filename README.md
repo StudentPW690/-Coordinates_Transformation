@@ -38,6 +38,7 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br>3. Program transformujący współrzędne geocentryczne do topocentrycznych:
 
 <br>4. Program transformujący współrzędne B,L do układu PL2000:
+
 <br> ***Używanie programu - przykład***
 <br> Program został napisany tak, aby mógł pracować na większej ilości danych - plikach. 
 <br> W tym celu w programie Notatnik (plik .txt) zamieszczono dane o następującej charakterystyce:
@@ -74,3 +75,13 @@ należy posługiwać się wyżej ukazaną instrukcją.
 
 <br>Xgk2000 = 5588335.008m
 <br>Ygk2000 = 6569612.324m
+
+
+<br>Xgk2000 = 5568438.794m
+<br>Ygk2000 = 5547545.000m
+
+<br>Xgk2000 = 5670526.555m
+<br>Ygk2000 = 5516609.861m
+<br> Wyniki podane są w metrach oraz zostały zaokrąglone do trzeciego miejsca po przecinku. 
+
+<br>5. Program transformujący współrzędne B,L do układu PL1992:
