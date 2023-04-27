@@ -7,22 +7,20 @@ pamięć RAM o wielkości 16 GB.
 <br> Drugi komputer wykorzystany do napisania projektu posiada system operacyjny Windows 10, 64-bitowy, pamięć RAM 16 GB,
 procesor Intel CORE i7 oraz kartę graficzną NVIDIA GEFORCE GTX 1660Ti.
 <br> Użytkowanie programu jest możliwe, jedynie po uprzednim zainstalowaniu języka programowania Python w jednej z najnowszysch wersji, np. 3.10.
-<br>Aby skorzystać z jednego z programów należy zakomentować za pomocą symbolu kratki (#) wszystkie pozostałe programy. 
-<br>Tzn. zaznaczyć wszystkie programy, poza tym, który ma być użyty i kliknąć CTRL+1, bądź ręcznie wstawić kratki w każdą linię nieużywanego w danym momencie kodu.
-<br>Następnie należy uruchomić "Wiersz polecenia" na komputerze użytkownika, przejść do odpowiedniego folderu, w którym znajduje się plik programu (.py) oraz 
-pliki z danymi (.txt) i uruchomić program.
+<br>Aby skorzystać z jednego z programów należy uruchomić "Wiersz polecenia" na komputerze użytkownika, przejść do odpowiedniego folderu, w 
+którym znajduje się plik programu (.py) oraz pliki z danymi (.txt) i uruchomić program. Wpisać w wiersz polecenia interesującą transformację spośród dostępnych poniżej. 
 <br> Po uruchomieniu programu python: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
 <br>Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
 analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze posługiwanie się funkcjami matematycznymi. 
 Zaś biblioteka argparse pozwala na łatwe parsowanie argumentów wywołania programu z wiersza poleceń, 
 umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać do programu podczas jego uruchamiania.  
 
-<br>W podanym programie przedstawione zostały transformacje ze współrzędnych:
-<br> 1) geocentrycznych (XYZ) na elipsoidalne(BLH),
-<br> 2) elipsoidalnych (BLH) na geocentryczne (XYZ); 
-<br> 3) geocentrycznych (XYZ) na topocentryczne (NEU); 
-<br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000;
-<br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992; 
+<br>W podanym programie przedstawione zostały transformacje ze współrzędnych wraz z ich odpowiednikami do wpisania w wiersz polecenia:
+<br> 1) geocentrycznych (XYZ) na elipsoidalne(BLH) - xyz2blh,
+<br> 2) elipsoidalnych (BLH) na geocentryczne (XYZ) - blh2xyz; 
+<br> 3) geocentrycznych (XYZ) na topocentryczne (NEU) - xyz-neu; 
+<br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000 - fl22000;
+<br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992 - fl21992; 
 <br> Dodatkowo są obsługiwane elispoidy GRS80, Krasowski oraz WGS84.
 <br> Elipsoidy charakteryzują się wartościami *a* oraz *e<sup>2</sup>*.
 <br>Gdzie *a* jest to wielka półoś elipsy, a *e<sup>2</sup>* to mimośród.
