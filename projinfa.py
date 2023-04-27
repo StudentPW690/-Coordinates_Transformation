@@ -121,7 +121,7 @@ class Transformacje:
 def parse_args():
     parser = argparse.ArgumentParser(description='Konwerter współrzędnych geodezyjnych na kartezjańskie')
     parser.add_argument("-f", type=str, required=True, help="scieżka do pliku wejciowego")
-    parser.add_argument('-t', type=str, required=True, help='rodzaj transformacji: xyz2blh lub blh2xyz')
+    parser.add_argument('-t', type=str, required=True, help='rodzaj transformacji')
     return parser.parse_args()
 
 if __name__ == "__main__":
