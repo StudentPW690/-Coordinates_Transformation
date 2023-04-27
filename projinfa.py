@@ -119,7 +119,7 @@ class Transformacje:
         return(Xgk1992, Ygk1992)
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Konwerter współrzędnych geodezyjnych na kartezjańskie')
+    parser = argparse.ArgumentParser(description='Konwerter współrzędnych')
     parser.add_argument("-f", type=str, required=True, help="scieżka do pliku wejciowego")
     parser.add_argument('-t', type=str, required=True, help='rodzaj transformacji')
     return parser.parse_args()
