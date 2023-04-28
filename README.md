@@ -8,7 +8,7 @@ pamięć RAM o wielkości 16 GB.
 procesor Intel CORE i7 oraz kartę graficzną NVIDIA GEFORCE GTX 1660Ti.
 <br> Użytkowanie programu jest możliwe, jedynie po uprzednim zainstalowaniu języka programowania Python w jednej z najnowszysch wersji, np. 3.10.
 <br>Aby skorzystać z jednego z programów należy uruchomić "Wiersz polecenia" na komputerze użytkownika, przejść do odpowiedniego folderu, w 
-którym znajduje się plik programu (.py) oraz pliki z danymi (.txt) i uruchomić program. Wpisać w wiersz polecenia interesującą transformację spośród dostępnych poniżej. 
+którym znajduje się plik programu (.py) oraz pliki z danymi (.txt) i uruchomić program. Wpisać w wiersz polecenia komendę np. ***python projinfa.py -f dane_f_l_h.txt -t flh2xyz*** . 
 <br> Po uruchomieniu programu python: ```projinfa.py```, należy zapoznać się z jego wymaganiami, tzn. : zainstalowaniem biblioteki numpy oraz biblioteki argparse. 
 <br>Biblioteka numpy zawiera wiele funkcji i narzędzi do przetwarzania,
 analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze posługiwanie się funkcjami matematycznymi. 
@@ -21,25 +21,61 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> 3) geocentrycznych (XYZ) na topocentryczne (NEU) - xyz-neu; 
 <br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000 - fl22000;
 <br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992 - fl21992; 
-<br> Dodatkowo są obsługiwane elispoidy GRS80, Krasowski oraz WGS84.
+<br> Każdy z programów obsługuje elispoidy GRS80, Krasowski oraz WGS84.
 <br> Elipsoidy charakteryzują się wartościami *a* oraz *e<sup>2</sup>*.
 <br>Gdzie *a* jest to wielka półoś elipsy, a *e<sup>2</sup>* to mimośród.
 <br> Przy elipsoidzie GRS80 te wartości wynoszą odpowiednio 6378137.000 oraz 0.00669438002290, przy elipsoidzie WGS84
 6378137.000 oraz  0.00669437999014, a przy elipsoidzie Krasowskiego 6378245.000 oraz 0.00669342162297.
 <br> Ponadto dodano zabezpieczenie dzięki któremu, przy wprowadzeniu elipsoidy niewymienionej wyżej, program informuje komunikatem "Nieobsługiwana elipsoida!"
-
+<br>
+<br> Wszystkie rogramy zostały napisane tak, aby mogły pracować na większej ilości danych - plikach.
+<br>
 ***Funkcjonalność i posługiwanie się programami*** 
+<br> ***Używanie programu - przykład***
 <br>1. Program transformujący współrzędne geocentryczne do elipsoidalnych:
+<br> Struktura danych:
+<br> plik z danymi geocentrycznymi charakteryzuje się następującym ułożeniem danych:
+<br> pierwsza kolumna to wszpółrzędna X - w metrach
+<br> druga kolumna to współrzędna Y - w metrach
+<br> trzecia kolumna to współrzędna Z - w metrach
+<br> czwarta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> Kolumny są od siebie oddzielone spacjami.
+<br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
 <br>2. Program transformujący współrzędne elipsoidalne do geocentrycznych:
+<br> Struktura danych:
+<br> plik z danymi elipsoidalnymi charakteryzuje się następującym ułożeniem danych:
+<br> pierwsza kolumna to wszpółrzędna stopniowa phi
+<br> druga kolumna to współrzędna minutowa phi
+<br> trzecia kolumna to współrzędna sekundowa phi
+<br> czwarta to wszpółrzędna stopniowa lambdy
+<br> piąta to współrzędna minutowa lambdy
+<br> szósta to współrzędna sekundowa lambdy
+<br> siódma to wysokość punktu w metrach
+<br> ósma kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> Kolumny są od siebie oddzielone spacjami.
+<br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
 <br>3. Program transformujący współrzędne geocentryczne do topocentrycznych:
+<br> Struktura danych:
+<br> plik z danymi współrzędnymi geocentrycznymi charakteryzuje się następującym ułożeniem danych:
+<br> pierwsza kolumna to wszpółrzędna X - w metrach
+<br> druga kolumna to współrzędna Y - w metrach
+<br> trzecia kolumna to współrzędna Z - w metrach
+<br> czwarta kolumna to odległość między punktami w metrach.
+<br> piąta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> szósta kolumna to wszpółrzędna stopniowa azymutu danego punktu
+<br> siódma kolumna to współrzędna minutowa azymutu danego punktu
+<br> ósma kolumna to współrzędna sekundowa azymutu danego punktu
+<br> dziewiąta to wszpółrzędna stopniowa kąta zenitalnego danego punktu
+<br> dziesiąta to współrzędna minutowa kąta zenitalnego danego punktu
+<br> jedenasta to współrzędna sekundowa kąta zenitalnego danego punktu
+<br> Kolumny są od siebie oddzielone spacjami.
+<br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
 <br>4. Program transformujący współrzędne B,L do układu PL2000:
-
-<br> ***Używanie programu - przykład***
-<br> Program został napisany tak, aby mógł pracować na większej ilości danych - plikach. 
-<br> W tym celu w programie Notatnik (plik .txt) zamieszczono dane o następującej charakterystyce:
+<br> Struktura danych:
+<br> plik z danymi współrzędnymi B, L charakteryzuje się następującym ułożeniem danych:
 <br> 1. pierwsza kolumna stanowi wartość stopniową kąta B,
 <br> 2. druga kolumna stanowi wartość minutową kąta B,
 <br> 3. trzecia kolumna - wartość minutową kąta B,
@@ -56,6 +92,27 @@ w którym otrzymujemy wyniki podzielone na dwie kolumny:
 <br> Nadmienic należy, że każde kolumny rozdzielone są spacją.
 <br> Program został przetestowany za pomocą wiersza poleceń, aby wprowadzić plik tekstowy do obliczenia wartości
 należy posługiwać się wyżej ukazaną instrukcją. 
+<br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
+
+<br>5. Program transformujący współrzędne B,L do układu PL1992:
+Struktura danych:
+<br> plik z danymi współrzędnymi B, L charakteryzuje się następującym ułożeniem danych:
+<br> 1. pierwsza kolumna stanowi wartość stopniową kąta B,
+<br> 2. druga kolumna stanowi wartość minutową kąta B,
+<br> 3. trzecia kolumna - wartość minutową kąta B,
+<br> 4. czwarta kolumna stanowi wartość stopniową L,
+<br> 5. piąta kolumna stanowi wartość minutową L,
+<br> 6. szósta kolumna - wartość minutową kąta L,
+<br> 7. siódma kolumna - to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> Kolumny rozdzielone są spacją.
+<br> Po uruchomieniu programu następuje proces zapisu do pliku tekstowego (.txt), 
+<br> X oraz Y w układzie PL1992.
+<br> Program został przetestowany za pomocą wiersza poleceń, aby wprowadzić plik tekstowy do obliczenia wartości
+należy posługiwać się wyżej ukazaną instrukcją. 
+<br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
+<br>
+<br>Poniżej prezentowany jest przykładowy format danych wejściowych i wyjściowych na podstawie transformacji współrzędnych geocentrycznych 
+do układu PL2000
 
 <br>*Przykład:* 
 <br>52 16 17 17 56 49 GRS80 6 18 
@@ -80,6 +137,6 @@ należy posługiwać się wyżej ukazaną instrukcją.
 
 <br>Xgk2000 = 5670526.555m
 <br>Ygk2000 = 5516609.861m
-<br> Wyniki podane są w metrach oraz zostały zaokrąglone do trzeciego miejsca po przecinku. 
+<br> Wszystkie wyniki zostały zaokrąglone do trzeciego miejsca po przecinku w przypadku metrów, zaś w przypadku miar stopniowych - do pięciu. 
 
-<br>5. Program transformujący współrzędne B,L do układu PL1992:
+<br> ***Programy zostały przetestowane i nie prezentuje nietypowych zachowań, jeśli jest właściwie użytkowany.***
