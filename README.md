@@ -139,4 +139,4 @@ do układu PL2000
 <br>Ygk2000 = 5516609.861m
 <br> Wszystkie wyniki zostały zaokrąglone do trzeciego miejsca po przecinku w przypadku metrów, zaś w przypadku miar stopniowych - do pięciu. 
 
-<br> ***Programy zostały przetestowane i nie prezentuje nietypowych zachowań, jeśli jest właściwie użytkowany.***
+<br> ***Program został przetestowany i nie prezentuje nietypowych zachowań, o ile jest użytkowany zgodnie z powyższą instrukcją.***
