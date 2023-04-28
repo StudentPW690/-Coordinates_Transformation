@@ -31,45 +31,45 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> Wszystkie rogramy zostały napisane tak, aby mogły pracować na większej ilości danych - plikach.
 <br>
 ***Funkcjonalność i posługiwanie się programami*** 
-<br> ***Używanie programu - przykład***
+<br>
 <br>1. Program transformujący współrzędne geocentryczne do elipsoidalnych:
 <br> Struktura danych:
 <br> plik z danymi geocentrycznymi charakteryzuje się następującym ułożeniem danych:
-<br> pierwsza kolumna to wszpółrzędna X - w metrach
-<br> druga kolumna to współrzędna Y - w metrach
-<br> trzecia kolumna to współrzędna Z - w metrach
-<br> czwarta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> 1. pierwsza kolumna to wszpółrzędna X - w metrach
+<br> 2. druga kolumna to współrzędna Y - w metrach
+<br> 3. trzecia kolumna to współrzędna Z - w metrach
+<br> 4. czwarta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
 <br> Kolumny są od siebie oddzielone spacjami.
 <br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
 <br>2. Program transformujący współrzędne elipsoidalne do geocentrycznych:
 <br> Struktura danych:
 <br> plik z danymi elipsoidalnymi charakteryzuje się następującym ułożeniem danych:
-<br> pierwsza kolumna to wszpółrzędna stopniowa phi
-<br> druga kolumna to współrzędna minutowa phi
-<br> trzecia kolumna to współrzędna sekundowa phi
-<br> czwarta to wszpółrzędna stopniowa lambdy
-<br> piąta to współrzędna minutowa lambdy
-<br> szósta to współrzędna sekundowa lambdy
-<br> siódma to wysokość punktu w metrach
-<br> ósma kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> 1. pierwsza kolumna to wszpółrzędna stopniowa phi
+<br> 2. druga kolumna to współrzędna minutowa phi
+<br> 3. trzecia kolumna to współrzędna sekundowa phi
+<br> 4. czwarta to wszpółrzędna stopniowa lambdy
+<br> 5. piąta to współrzędna minutowa lambdy
+<br> 6. szósta to współrzędna sekundowa lambdy
+<br> 7. siódma to wysokość punktu w metrach
+<br> 8. ósma kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
 <br> Kolumny są od siebie oddzielone spacjami.
 <br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
 <br>3. Program transformujący współrzędne geocentryczne do topocentrycznych:
 <br> Struktura danych:
 <br> plik z danymi współrzędnymi geocentrycznymi charakteryzuje się następującym ułożeniem danych:
-<br> pierwsza kolumna to wszpółrzędna X - w metrach
-<br> druga kolumna to współrzędna Y - w metrach
-<br> trzecia kolumna to współrzędna Z - w metrach
-<br> czwarta kolumna to odległość między punktami w metrach.
-<br> piąta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
-<br> szósta kolumna to wszpółrzędna stopniowa azymutu danego punktu
-<br> siódma kolumna to współrzędna minutowa azymutu danego punktu
-<br> ósma kolumna to współrzędna sekundowa azymutu danego punktu
-<br> dziewiąta to wszpółrzędna stopniowa kąta zenitalnego danego punktu
-<br> dziesiąta to współrzędna minutowa kąta zenitalnego danego punktu
-<br> jedenasta to współrzędna sekundowa kąta zenitalnego danego punktu
+<br> 1. pierwsza kolumna to wszpółrzędna X - w metrach
+<br> 2. druga kolumna to współrzędna Y - w metrach
+<br> 3. trzecia kolumna to współrzędna Z - w metrach
+<br> 4. czwarta kolumna to odległość między punktami w metrach.
+<br> 5. piąta kolumna to rodzaj elipsoidy GRS80, WGS84 lub Krasowski
+<br> 6. szósta kolumna to wszpółrzędna stopniowa azymutu danego punktu
+<br> 7. siódma kolumna to współrzędna minutowa azymutu danego punktu
+<br> 8. ósma kolumna to współrzędna sekundowa azymutu danego punktu
+<br> 9. dziewiąta to wszpółrzędna stopniowa kąta zenitalnego danego punktu
+<br> 10. dziesiąta to współrzędna minutowa kąta zenitalnego danego punktu
+<br> 11. jedenasta to współrzędna sekundowa kąta zenitalnego danego punktu
 <br> Kolumny są od siebie oddzielone spacjami.
 <br> Plik wynikowy zawiera podpisane współrzędne jedna pod drugą, każdy punkt jest odseparowany od poprzedniego linijką odstępu.
 
