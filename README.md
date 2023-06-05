@@ -15,12 +15,13 @@ analizy i manipulacji dużych danych numerycznych, co pozwala na łatwiejsze pos
 Zaś biblioteka argparse pozwala na łatwe parsowanie argumentów wywołania programu z wiersza poleceń, 
 umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać do programu podczas jego uruchamiania.  
 
-<br>W podanym programie przedstawione zostały transformacje ze współrzędnych wraz z ich odpowiednikami do wpisania w wiersz polecenia:
-<br> 1) geocentrycznych (XYZ) na elipsoidalne(BLH) - xyz2blh,
-<br> 2) elipsoidalnych (BLH) na geocentryczne (XYZ) - blh2xyz; 
-<br> 3) geocentrycznych (XYZ) na topocentryczne (NEU) - xyz-neu; 
-<br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000 - fl22000;
-<br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992 - fl21992; 
+<br>W podanym programie przedstawione zostały transformacje ze współrzędnych wraz z ich odpowiednikami do wpisania w wiersz polecenia
+za flagą "-f" oraz "-t". Należy dodać, że elipsoida odniesienia zawarta jest w pliku z danymi:
+<br> 1) geocentrycznych (XYZ) na elipsoidalne(BLH) - xyz2blh - dane_xyz.txt,
+<br> 2) elipsoidalnych (BLH) na geocentryczne (XYZ) - blh2xyz - dane_f_l_h.txt; 
+<br> 3) geocentrycznych (XYZ) na topocentryczne (NEU) - xyz-neu - neu_1.txt; 
+<br> 4) BL (GRS80, Krasowski, WGS84) na układ 2000 - fl22000 - dane_2000.txt;
+<br> 5) BL (GRS80, Krasowski, WGS84) na układ 1992 - fl21992 - dane_1992.txt; 
 <br> Każdy z programów obsługuje elispoidy GRS80, Krasowski oraz WGS84.
 <br> Elipsoidy charakteryzują się wartościami *a* oraz *e<sup>2</sup>*.
 <br>Gdzie *a* jest to wielka półoś elipsy, a *e<sup>2</sup>* to mimośród.
@@ -78,14 +79,15 @@ umożliwia definiowanie zestawu argumentów, które użytkownik może przekazać
 <br> plik z danymi współrzędnymi B, L charakteryzuje się następującym ułożeniem danych:
 <br> 1. pierwsza kolumna stanowi wartość stopniową kąta B,
 <br> 2. druga kolumna stanowi wartość minutową kąta B,
-<br> 3. trzecia kolumna - wartość minutową kąta B,
+<br> 3. trzecia kolumna - wartość sekundową kąta B,
 <br> 4. czwarta kolumna stanowi wartość stopniową L,
 <br> 5. piąta kolumna stanowi wartość minutową L,
-<br> 6. szósta kolumna - wartość minutową kąta L,
-<br> 7. siódma kolumna - numer pasa odwzorowawczego w układzie PL2000 
+<br> 6. szósta kolumna - wartość sekundową kąta L,
+<br> 7. siódma kolumna - elipsoida odniesienia
+<br> 7. ósma kolumna - numer pasa odwzorowawczego w układzie PL2000 
 (dla wartości lambdy z przedziału: 13.5-16.5 stopnia - pas 5;
 <br> 16.5-19.5 stopnia - pas 6; 19.5-22.5 stopnia - pas 7; 22.5-25.5 - pas 8)
-<br> 8. ósma kolumna - wartość stopniowa dla danego pasa odwzorowawczego (odpowiednio 15, 18, 21 lub 24 stopnie)
+<br> 8. dziewiąta kolumna - wartość stopniowa dla danego pasa odwzorowawczego (odpowiednio 15, 18, 21 lub 24 stopnie)
 <br>Po uruchomieniu programu następuje proces zapisu do pliku tekstowego (.txt), 
 w którym otrzymujemy wyniki podzielone na dwie kolumny:
 <br> X oraz Y w układzie PL2000.
@@ -114,7 +116,40 @@ należy posługiwać się wyżej ukazaną instrukcją.
 <br>Poniżej prezentowany jest przykładowy format danych wejściowych i wyjściowych na podstawie transformacji współrzędnych geocentrycznych 
 do układu PL2000
 
-<br>*Przykład:* 
+<br>*Przykład danych i wyników dla układu flh:* 
+<br>3966086.489 1305184.14 4807557.867 GRS8
+<br>2594756.458 1258912.127 5988562.236 GRS80
+<br>4662213.222 2465664.45 4635321.796 GRS80
+<br>3565612.777 2565640.556 6461121.55 GRS80
+
+<br>*Wyniki:* 
+<br>49 12 58.78907 18 12 56.37406 1650.3924115495756
+<br>64 25 43.38731 25 52 53.48209 286078.44287547097
+<br>41 29 6.26767 27 52 21.48094 652739.9648549976
+<br>55 56 5.83887 35 44 12.99946 1449455.9073869158
+
+<br>*Przykład danych i wyników dla układu xyz:*
+<br>52 16 17 17 56 49 1380 GRS80
+<br>51 30 16 18 14 15 1100 GRS80
+<br>50 25 36 18 58 47 1120 GRS80
+<br>48 73 0 17 73 0 1380 GRS80
+<br>47 58 11 18 39 0 1000 GRS80 
+
+<br>*Przykład danych i wyników dla układu neu:*
+<br>3966086.489 1305184.14 4807557.867 45000 GRS80 140 12 11 90 21 36
+<br>2594756.458 1258912.127 5988562.236 39000 GRS80 136 21 22 74 45 36
+<br>4662213.222 2465664.45 4635321.796 12000 GRS80 98 52 56 31 13 25
+<br>3565612.777 2565640.556 6461121.55 19000 GRS80 54 58 56 25 36 54
+<br>3712175.133 1195423.468 5030233.372 45000 GRS80 145 0 0 90 0 0
+
+<br>*Wyniki:* 
+<br>3981774.1438207296 1340668.7942520792 4784760.130295756
+<br>2609500.0820656586 1294930.8288538377 5986056.509323986
+<br>4666697.960881452 2474988.779722079 4641399.952990334
+<br>3566303.8455388434 2574425.4681938 6477954.486226988
+<br>3732062.7875661883 1228944.0998274118 5007742.297375895
+
+<br>*Przykład danych i wyników dla układu 2000:* 
 <br>52 16 17 17 56 49 GRS80 6 18 
 <br>51 30 16 18 14 15 GRS80 6 18 
 <br>50 25 36 18 58 47 GRS80 6 18
@@ -124,19 +159,27 @@ do układu PL2000
 <br>*Wyniki:* 
 <br>Xgk2000 = 5793095.196m
 <br>Ygk2000 = 6496378.604m
-
 <br>Xgk2000 = 5707793.947m
 <br>Ygk2000 = 6516489.238m
-
 <br>Xgk2000 = 5588335.008m
 <br>Ygk2000 = 6569612.324m
-
-
 <br>Xgk2000 = 5568438.794m
 <br>Ygk2000 = 5547545.000m
-
 <br>Xgk2000 = 5670526.555m
 <br>Ygk2000 = 5516609.861m
+
+<br>*Przykład danych i wyników dla układu 1992:*
+<br>52 16 17 17 56 49 GRS80
+<br>51 30 16 18 14 15 GRS80
+<br>50 25 36 18 58 47 GRS80
+<br>50 0 0 17 0 0 GRS80
+
+<br>*Wyniki:* 
+<br>490007.61533614807 428167.7232146943
+<br>404486.5195817286 447094.1665216715
+<br>284394.91059595626 498560.0850977532
+<br>238884.5408753967 356713.89205648884
+
 <br> Wszystkie wyniki zostały zaokrąglone do trzeciego miejsca po przecinku w przypadku metrów, zaś w przypadku miar stopniowych - do pięciu. 
 
 <br> ***Program został przetestowany i nie prezentuje nietypowych zachowań, o ile jest użytkowany zgodnie z powyższą instrukcją.***
